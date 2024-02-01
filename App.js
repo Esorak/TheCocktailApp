@@ -56,12 +56,14 @@ export default function Homepage() {
                 source={{ uri: cookRand.drinks[0].strDrinkThumb }}
                 style={styles.image}
               />
+              {/* changer pour avoir une liste plutot que des text */}
               <Text style={styles.desc}>
                 Ingredient:{' '}
                 {allIngredients.map((ingredient, index) => (
-                  <Text key={index}>{ingredient}</Text>
+                  <Text key={index}>{ingredient}\n</Text>
                 ))}
               </Text>
+              {/* changer pour avoir une liste plutot que des text */}
             </View>
           </View>
         )}
@@ -100,5 +102,7 @@ const styles = StyleSheet.create({
     height: windowHeight,
   },
 
-  desc: {},
+  desc: {
+
+  },
 });
