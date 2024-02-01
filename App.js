@@ -7,7 +7,9 @@ import {
   ScrollView,
   Dimensions,
   ImageBackground,
+  FlatList,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
 
 export default function Homepage() {
@@ -60,7 +62,7 @@ export default function Homepage() {
               <Text style={styles.desc}>
                 Ingredient:{' '}
                 {allIngredients.map((ingredient, index) => (
-                  <Text key={index}>{ingredient}\n</Text>
+                  <FlatList key={index}>{ingredient}\n</FlatList>
                 ))}
               </Text>
               {/* changer pour avoir une liste plutot que des text */}
